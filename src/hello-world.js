@@ -1,24 +1,19 @@
-import { html, css, LitElement } from 'lit';
+class Messages {
 
-export class SimpleGreeting extends LitElement {
-    static styles = css`
-        p { 
-            color: blue;
-         }
-    `;
+    static hello = "Hello World!";
+    static hi = "Hi!";
 
-    static properties = {
-        name: { type: String },
-    };
-
-    constructor() {
-        super();
-        this.name = 'Somebody';
+    static getSection() {
+        return `
+            <label id="message" class="form-label">${this.hi}</label>
+        `;
     }
 
-    render() {
-        return html`<p>Hello ${this.name}!</p>`;
+    static run() {
+        const message = document.getElementById("message");
+        message.innerText = Messages.hello;
     }
+
 }
 
-customElements.define('simple-greeting', SimpleGreeting);
+export { Messages };

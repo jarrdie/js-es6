@@ -4,8 +4,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "web-dev-server --port 10001 --open /demo/hello-world.html --node-resolve",
-    "start:watch": "web-dev-server --port 10001 --open demo/hello-world.html --node-resolve --watch",
+    "start": "web-dev-server --port 10001 --open /demo/viewer.html --node-resolve",
+    "start:watch": "web-dev-server --port 10001 --open demo/viewer.html --node-resolve --watch",
     "test": "web-test-runner tsc-out/test/**/*.test.js --node-resolve",
     "test:watch": "web-test-runner dist/test/**/*.test.js --node-resolve --watch"
   },

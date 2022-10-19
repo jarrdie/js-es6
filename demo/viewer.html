@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="viewer.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module">
+
+    import { Messages } from "../src/hello-world.js";
+    import { Calculator } from "../src/calculator.js";
+    const demos = [Messages, Calculator];
+
+    demos.forEach((demo) => {
+      const section = document.createElement("section");
+      section.innerHTML = demo.getSection();
+      document.body.appendChild(section);
+      demo.run();
+    });
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
