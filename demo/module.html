@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script type="module">
+    import { html, render } from "lit-html";
+    import { message } from "../src/module.js";
+
+    render(html`<p>Hello lit: ${message}</p>`, document.body);
+  </script>
+</body>
+
+</html>
